@@ -6,7 +6,6 @@ const handler = async (req , res) => {
         const user = await User.findById(req.body.id);
         
         const token = await Token.findOne({
-            userId : user._id,
             token : req.body.token,
         });
 
