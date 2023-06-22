@@ -65,7 +65,8 @@ export default function ProductScreen({product}) {
 		let id = product._id;
 		try{
 			const {data} = await axios.post('/api/products/review' , { id  , review  , star });
-			router.reload();
+			
+			// router.reload();
 		}catch(err){
 			toast.error(getError(err));
 		}
@@ -115,7 +116,7 @@ export default function ProductScreen({product}) {
 								<div className="product-info">
 									<div className="fix">
 										<h4 className="post-title floatleft">{product.name}</h4>
-										<span className="pro-rating floatright">
+										<span className="pro-rating floatright" style={{float : 'right'}}>
 											<Ratingstars reviews={product.reviews} />
 											<span >( {product.reviews.length} Rating )</span>
 										</span>
@@ -132,10 +133,10 @@ export default function ProductScreen({product}) {
 										{product.info.primary_material && <p>Primary Material - <span style={{fontWeight : 'normal'}}>{product.info.primary_material}</span></p>}
 										{ product.info.top_material && <p>Top Material - <span style={{fontWeight : 'normal'}}>{product.info.top_material}</span></p>}
 									</div>
-									<Image width={1920} height={180} alt='Want to customize it ? click on the whatsapp icon below' src="/img/customizeText.svg"></Image>
+									<Image width={7150} height={750} alt='Want to customize it ? click on the whatsapp icon below' src="/img/customizeText.png"></Image>
 									
-									<div className="clearfix" style={{display : 'flex'}}>
-										<div style={{display:'flex' , backgroundColor : '#6d8c75' , height:'40px' , width : '175px' , alignItems : 'center' , justifyContent : 'space-evenly'}}>
+									<div className="clearfix responsiveFelxi" style={{display : 'flex'}} >
+										<div style={{display:'flex' , backgroundColor : '#6d8c75' , height:'40px' , width : '175px' , alignItems : 'center' , justifyContent : 'space-evenly'}} className='hundredpr'>
 											<span className='onhoverMilk' onClick={() =>{ if(qty > 1)setQty(qty-1)}} style={{fontSize : '1.5em'  , fontWeight : 'lighter',  cursor : 'pointer'}}>-</span>
 											<input className='cart-plus-minus-box' disabled  style={{ height : '17px', color : "#343434" , borderRight : 'solid #343434 0.5px' , borderLeft : 'solid #343434 0.5px'}} type="text" value={qty}  />	
 											<span className='onhoverMilk' onClick={() => setQty(qty+1)} style={{fontSize : '1.5em'  , fontWeight : 'lighter' , cursor : 'pointer'}}>+</span>

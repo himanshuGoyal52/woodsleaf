@@ -44,7 +44,17 @@ function Auth({children , adminOnly}) {
     }
   });
   if(status === 'loading'){
-    return <div id="loading"></div>;
+    return (
+      <div className="LoadingGif">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-8 offset-md-2 p-50">
+                    <img src="/img/loader.gif" alt="Loading..." style={{width:'25%' ,height:'25%'}}/>
+                </div>
+            </div>
+        </div>
+      </div>
+    );
   }
   if(adminOnly && !session.user.isAdmin){
     router.push('/unauthorized?message=Admin login required')

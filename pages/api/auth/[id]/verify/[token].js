@@ -4,14 +4,11 @@ import Token from "../../../../../models/Token";
 const handler = async (req , res) => {
     try{
         const user = await User.findById(req.body.id);
-        console.log(user);
-        console.log(req.body);
         
         const token = await Token.findOne({
             userId : user._id,
             token : req.body.token,
         });
-        console.log(token);
 
         if(!token){
             return res.status(400).send({message : "invalid link"});
@@ -20,7 +17,7 @@ const handler = async (req , res) => {
         user.verified = true;
         await user.save();
         await token.remove();
-        res.status(200).send({message : 'Email verified!!', user : user});
+        res.status(200).send({message : 'Email verified!!' , user : user});
     }catch(err){
         res.status(404).send({message : 'some error occured'});
     }

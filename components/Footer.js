@@ -132,7 +132,7 @@ export default function Footer({title , your_products}) {
                                     </div>
                                 :
                                 <div className="single-footer newsletter-item">
-                                    <h3 className="footer-title  title-border">Email Newsletters</h3>
+                                    <h3 className="footer-title  title-border">Email Newsletter</h3>
                                     <div className="footer-subscribe">
                                         <form onSubmit={handleSubmit2(submitHandler2)}>
                                             <input type="text" name="email" placeholder="Email Address..." {...register2('email' , {required:"Please enter email" , pattern : {value:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i , message : "Please enter valid email"} })} />

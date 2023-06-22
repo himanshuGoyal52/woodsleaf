@@ -39,7 +39,7 @@ export default function SingleBlogScreen({blog}) {
 												</>
 											))
 										}
-										<div className="post-share-tag clearfix mt-40">
+										<div className="post-share-tag clearfix mt-40 " >
 											<div className="post-share floatleft" style={{color : '#efebd9'}}>
 												<span className="text-uppercase"><strong>Share</strong></span>
 												<a><WhatsappShareButton title={blog?.title} separator='||' url={`https://www.woodsleaf.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-whatsapp"></i></WhatsappShareButton></a>

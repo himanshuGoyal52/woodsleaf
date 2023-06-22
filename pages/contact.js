@@ -64,7 +64,7 @@ export default function Contact() {
 										<li>
 											<i className="zmdi zmdi-phone"></i>
 											<span>+91-98294 74326</span>
-											<span>+91-74129 72658</span>
+											<span>+91-72908 19777</span>
 										</li>
 										<li>
 											<i className="zmdi zmdi-email"></i>

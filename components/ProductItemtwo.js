@@ -30,7 +30,7 @@ export default function ProductItemtwo({product , addToCartHandler , showProduct
 				<div className="product-description">
 					<p>{product.desc.slice(0,326)}...</p>
 				</div>
-				<div className="clearfix" style={{display : 'flex'}}>
+				<div className="clearfix responsiveFelxi" style={{display : 'flex'}}>
 					<div style={{display:'flex' , backgroundColor : '#6d8c75' , height:'40px' , width : '175px' , alignItems : 'center' , justifyContent : 'space-evenly'}}>
 						<span className='onhoverMilk' onClick={() =>{ if(qty > 1)setQty(qty-1)}} style={{fontSize : '1.5em'  , fontWeight : 'lighter',  cursor : 'pointer'}}>-</span>
 						<input className='cart-plus-minus-box' disabled  style={{ height : '17px', color : "#343434" , borderRight : 'solid #343434 0.5px' , borderLeft : 'solid #343434 0.5px'}} type="text" value={qty}  />	

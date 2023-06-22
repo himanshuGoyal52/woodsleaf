@@ -1069,6 +1069,20 @@ input[type="range"]::-moz-range-thumb {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width:100%;
   z-index: 9999999;
+}
+
+.LoadingGif{
+  background: rgba(239, 235, 217) none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    text-align: center;
+    top: 0;
+    /* z-index: 9999999; */
 }

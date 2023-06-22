@@ -67,7 +67,7 @@ export default function shopCategory({products}) {
 		// router.push('/cart');
     };
 
-	const [priceRange , setPriceRange] = useState(300);
+	const [priceRange , setPriceRange] = useState(5000);
 	const [fproducts , setFproducts] = useState(products);
 
 	useEffect(() => {
@@ -95,16 +95,6 @@ export default function shopCategory({products}) {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-3 order-2 order-lg-1">
-							{/* <!-- Widget-Search start --> */}
-							<aside className="widget widget-search mb-30">
-								<form action="#">
-									<input type="text" placeholder="Search here..." />
-									<button type="submit">
-										<i className="zmdi zmdi-search"></i>
-									</button>
-								</form>
-							</aside>
-							{/* <!-- Widget-search end --> */}
 							{/* <!-- Widget-Categories start --> */}
 							<aside className="widget widget-categories  mb-30">
 								<div className="widget-title">
@@ -163,7 +153,7 @@ export default function shopCategory({products}) {
 									<div className="price_filter">
 										<div className="price_slider_amount">
 											<p>$ {priceRange}</p>
-											<input type="range" value={priceRange} min={50} max={2000} step='1' onChange={updateFilterValue} />
+											<input type="range" value={priceRange} min={50} max={10000} step='1' onChange={updateFilterValue} />
 										</div>
 										{/* <div id="slider-range"></div> */}
 									</div>

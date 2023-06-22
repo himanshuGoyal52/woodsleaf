@@ -1,7 +1,7 @@
 export const initializeJquery = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/vendor/jquery-3.6.0.min.js";
+      script.src = "http://localhost:3000/js/vendor/jquery-3.6.0.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -17,7 +17,7 @@ export const initializeJquery = () => {
 export const initializeJqueryMigrate = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/vendor/jquery-migrate-3.3.2.min.js";
+      script.src = "http://localhost:3000/js/vendor/jquery-migrate-3.3.2.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -33,7 +33,7 @@ export const initializeJqueryMigrate = () => {
 export const initializeBootstrap = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/bootstrap.bundle.min.js";
+      script.src = "http://localhost:3000/js/bootstrap.bundle.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -49,7 +49,7 @@ export const initializeBootstrap = () => {
 export const initializeMeanMenu = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/jquery.meanmenu.js";
+      script.src = "http://localhost:3000/js/jquery.meanmenu.js";
 
       script.onload = () => {
         resolve(true);
@@ -65,7 +65,7 @@ export const initializeMeanMenu = () => {
   export const initializeSlick = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/slick.min.js";
+      script.src = "http://localhost:3000/js/slick.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -81,7 +81,7 @@ export const initializeMeanMenu = () => {
   export const initializeTreeview = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/jquery.treeview.js";
+      script.src = "http://localhost:3000/js/jquery.treeview.js";
 
       script.onload = () => {
         resolve(true);
@@ -98,7 +98,7 @@ export const initializeMeanMenu = () => {
   export const initializeLightBox = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/lightbox.min.js";
+      script.src = "http://localhost:3000/js/lightbox.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -115,7 +115,7 @@ export const initializeMeanMenu = () => {
   export const initializeJqueryUI = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/jquery-ui.min.js";
+      script.src = "http://localhost:3000/js/jquery-ui.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -131,7 +131,7 @@ export const initializeMeanMenu = () => {
   export const initializeNivoSlider = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/lib/js/jquery.nivo.slider.js";
+      script.src = "http://localhost:3000/lib/js/jquery.nivo.slider.js";
 
       script.onload = () => {
         resolve(true);
@@ -147,7 +147,7 @@ export const initializeMeanMenu = () => {
   export const initializeHome = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/lib/home.js";
+      script.src = "http://localhost:3000/lib/home.js";
 
       script.onload = () => {
         resolve(true);
@@ -164,7 +164,7 @@ export const initializeMeanMenu = () => {
   export const initializeNiceScroll = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/jquery.nicescroll.min.js";
+      script.src = "http://localhost:3000/js/jquery.nicescroll.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -181,7 +181,7 @@ export const initializeMeanMenu = () => {
   export const initializeCountDown = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/countdon.min.js";
+      script.src = "http://localhost:3000/js/countdon.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -198,7 +198,7 @@ export const initializeMeanMenu = () => {
   export const initializeWOW = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/wow.min.js";
+      script.src = "http://localhost:3000/js/wow.min.js";
 
       script.onload = () => {
         resolve(true);
@@ -215,7 +215,7 @@ export const initializeMeanMenu = () => {
   export const initializePlugin = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/plugins.js";
+      script.src = "http://localhost:3000/js/plugins.js";
 
       script.onload = () => {
         resolve(true);
@@ -231,7 +231,7 @@ export const initializeMeanMenu = () => {
   export const initializeMain = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
-      script.src = "https://www.woodsleaf.com/js/main.js";
+      script.src = "http://localhost:3000/js/main.js";
 
       script.onload = () => {
         resolve(true);

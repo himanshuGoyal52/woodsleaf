@@ -11,6 +11,10 @@
   }
 }
 
+.hundredpr{display:'flex';
+   background-color : '#6d8c75';
+  height:'40px'; width : '175px' ; align-items : 'center' ; justify-content : 'space-evenly'}
+
 @media (min-width: 992px) and (max-width: 1365px){
     .banner-left {
         width: 100%;
@@ -379,7 +383,8 @@
 @media (max-width: 767px) {
   .prodcutPageRating{float:  none;}
   .formform{ width: 100vw; }
-.container {width:386px;}
+  .responsiveFelxi{flex-direction: column; }
+.container {width:97vw;}
 .mt-xs-30 {
   margin-top: 30px;
 }
@@ -685,10 +690,12 @@
 .shop-list .cart-plus-minus {
   width: 40%;
 }
+
 .shop-list .product-action {
-  margin: 0 0 0 5%;
-  width: 55%;
+  margin: 0.5rem 0;
+  width: 100%;
 }
+.hundredpr{width : '100%';}
 /* Single-product */
 .single-pro-info .single-product {
   padding: 15px 15px 30px 14px;

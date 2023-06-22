@@ -13,7 +13,8 @@ export default function EmailVerifyScreen() {
      useEffect(() => {
         const verifyEmailUrl = async () => {
             try{
-                const url = `https://www.woodsleaf.com/api/auth/${query.id}/verify/${query.token}`;
+                console.log('once only');
+                const url = `${process.env.NEXT_PUBLIC_URL}/api/auth/${query.id}/verify/${query.token}`;
                 const {data} = await axios.post(url , {
                     token : query.token,
                     id : query.id,
@@ -25,7 +26,9 @@ export default function EmailVerifyScreen() {
                 setValidUrl(false);
             }
         }
-        verifyEmailUrl();
+        if(query.token !== undefined && query.id !== undefined){
+            verifyEmailUrl();
+        }
     },[query])
 
 
@@ -39,12 +42,21 @@ export default function EmailVerifyScreen() {
           <div className="container">	
               <div className="row">
                   <div className="col-lg-12">   
-                    <div className="error-content text-center">
-                        <Image width={284} height={119} src="/img/bg/verified.png" alt="" />
-                        <h4 className="text-light-black mt-60">Welcome to Woodsleaf!!</h4>
-                        <p className="text-light-black">Your email is verified, please login into your account</p>
-                        <Link href="/login"><a style={{color:'#fff'}} className="button-one submit-btn-4 go-to-home text-uppercase "  data-text="Login" >Login</a></Link>
-                    </div>
+                    {validUrl ? (
+                        <div className="error-content text-center">
+                            <Image width={284} height={119} src="/img/bg/verified.png" alt="Verified!!" />
+                            <h4 className="text-light-black mt-60">Welcome to Woodsleaf!!</h4>
+                            <p className="text-light-black">Your email is verified, please login into your account</p>
+                            <Link href="/login"><a style={{color:'#fff'}} className="button-one submit-btn-4 go-to-home text-uppercase "  data-text="Login" >Login</a></Link>
+                        </div>
+                    ) : (
+                        <div className="error-content text-center">
+                            <Image width={284} height={119} src="/img/bg/error.png" alt="Not Verified" />
+                            <h4 className="text-light-black mt-60">Something went wrong!!</h4>
+                            <p className="text-light-black">Your email is not verified, please try again through login</p>
+                            <Link href="/login"><a style={{color:'#fff'}} className="button-one submit-btn-4 go-to-home text-uppercase "  data-text="Login" >Login</a></Link>
+                        </div>
+                    )}
                   </div>
               </div>
           </div>

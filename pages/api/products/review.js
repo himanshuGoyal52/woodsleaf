@@ -5,7 +5,7 @@ import Product from "../../../models/Product";
 const handler = async (req , res) => {
     const session = await getSession({req});
     if(!session){
-        return res.status(401).send('signing required');
+        return res.status(401).send({message:'signing required'});
     }
 
     const {user} = session;

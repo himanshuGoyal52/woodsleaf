@@ -30,7 +30,7 @@ export default function QuickView({product , addToCart}) {
                                          </div>
                                          <hr />
                                      </div>
-                                     <Link href={`/product/${product?.slug}`}><a   className="see-all">See all features</a></Link>
+                                     <a className="see-all" href={`/product/${product?.slug}`}>See all features</a>
                                      <div  className="quick-add-to-cart">
                                          <div  className="cart">
                                              <button style={{marginLeft : '0px'}}  className="single_add_to_cart_button" onClick={() => { addToCart(product , 1)}}>Add to cart</button>

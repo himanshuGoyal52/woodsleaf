@@ -55,7 +55,7 @@ async function handler ( req , res) {
         userId : user._id,
         token : crypto.randomBytes(32).toString("hex")
     }).save();
-    const url = `${process.env.NEXTAUTH_URL}/auth/${user._id}/verify/${token.token}`;
+    const url = `${process.env.NEXT_PUBLIC_URL}/auth/${user._id}/verify/${token.token}`;
     try{
         await transporter.sendMail({
             ...mailOptions,

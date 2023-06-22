@@ -20,7 +20,7 @@ export default function shop({products}) {
 		setproductObj(product);
 	}
 	
-	const [priceRange , setPriceRange] = useState(300);
+	const [priceRange , setPriceRange] = useState(5000);
 	const [fproducts , setFproducts] = useState(products);
 	const updateFilterValue = (e) => {
 		let value = e.target.value;
@@ -136,7 +136,7 @@ export default function shop({products}) {
 									<div className="price_filter">
 										<div className="price_slider_amount">
 											<p>$ {priceRange}</p>
-											<input type="range" value={priceRange} min={50} max={2000} step='1' onChange={updateFilterValue} />
+											<input type="range" value={priceRange} min={50} max={10000} step='1' onChange={updateFilterValue} />
 										</div>
 										{/* <div id="slider-range"></div> */}
 									</div>
