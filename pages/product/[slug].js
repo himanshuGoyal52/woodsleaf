@@ -37,6 +37,14 @@ export default function ProductScreen({product}) {
 		router.push('/cart');
     };
 
+	const addToCartHandlerq =  (product) => {
+	        const existItem = state.cart.cartItems.find((x) => x._id === product._id);
+	        const quantity = existItem ? existItem.quantity + qty : qty;		
+	        dispatch({type:'CART_ADD_ITEM' , payload : {...product , quantity }});	
+		toast.success(`${product.name} added to the cart`);
+		// router.push('/cart');
+    	};
+
 	// wishlist 
 	const addToWishlistHandler =  () => {
         const existItem = state.wishlist.wishlistItems.find((x) => x._id === product._id);
@@ -85,7 +93,7 @@ export default function ProductScreen({product}) {
 	  }
 
     return (
-      <Layout title={product.name} productObj={productObj} addToCart={addToCartHandler} desc={product.desc}>
+      <Layout title={product.name} productObj={productObj} addToCart={addToCartHandlerq} desc={product.desc}>
             <Banner bannerText={product.name} />
 			{/* <!-- PRODUCT-AREA START --> */}
 			<div className="product-area single-pro-area pt-80 pb-80 product-style-2">
