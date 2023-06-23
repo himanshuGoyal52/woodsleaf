@@ -1,12 +1,14 @@
 import User from "../../../../../models/User";
+import db from "../../../../../utils/db";
 import Token from "../../../../../models/Token";
 
 const handler = async (req , res) => {
+       try{
+        db.connect();
         const user = await User.findById(req.body.id);
-        
         const token = await Token.findOne({
-                userId : req.body.id,
-                token : req.body.token,
+            userId : req.body.id,
+            token : req.body.token,
         });
 
         if(!token){
@@ -16,7 +18,11 @@ const handler = async (req , res) => {
         user.verified = true;
         await user.save();
         await token.remove();
-        res.status(200).send({message : 'Email verified!!' , user : user});
+        db.disconnect();
+        res.status(200).send({message : 'Email verified!!', user : user});
+    }catch(err){
+        res.status(404).send({message : 'some error occured'});
+    }
     
 };
 export default handler;
