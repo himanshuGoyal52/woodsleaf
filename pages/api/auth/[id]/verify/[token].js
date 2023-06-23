@@ -2,10 +2,10 @@ import User from "../../../../../models/User";
 import Token from "../../../../../models/Token";
 
 const handler = async (req , res) => {
-    try{
-        const user = await User.findById(req.body.id);
+
+        let user = await User.findById(req.body.id);
         
-        const token = await Token.findOne({
+        let token = await Token.findOne({
             token : req.body.token,
         });
 
@@ -17,8 +17,6 @@ const handler = async (req , res) => {
         await user.save();
         await token.remove();
         res.status(200).send({message : 'Email verified!!' , user : user});
-    }catch(err){
-        res.status(404).send({message : 'some error occured'});
-    }
+    
 };
 export default handler;
