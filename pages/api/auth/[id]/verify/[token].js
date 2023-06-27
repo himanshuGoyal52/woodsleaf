@@ -21,7 +21,7 @@ const handler = async (req , res) => {
         db.disconnect();
         res.status(200).send({message : 'Email verified!!', user : user});
     }catch(err){
-        res.status(404).send({message : 'some error occured'});
+        res.status(404).send({message : err});
     }
     
 };
