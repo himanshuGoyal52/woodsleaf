@@ -3,7 +3,7 @@ import db from "../../../../../utils/db";
 import Token from "../../../../../models/Token";
 
 const handler = async (req , res) => {
-       try{
+       
         db.connect();
         const user = await User.findById(req.body.id);
         const token = await Token.findOne({
@@ -20,9 +20,7 @@ const handler = async (req , res) => {
         await token.remove();
         db.disconnect();
         res.status(200).send({message : 'Email verified!!', user : user});
-    }catch(err){
-        res.status(404).send({message : err});
-    }
+    
     
 };
 export default handler;
