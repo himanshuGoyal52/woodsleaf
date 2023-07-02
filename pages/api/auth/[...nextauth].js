@@ -35,7 +35,9 @@ export default NextAuth({
 
                 if(user && bcryptjs.compareSync(credentials.password , user.password)){
                     if(!user.verified){
+                        await db.connect();
                         let token = await Token.findOne({userId : user._id});
+                        await db.disconnect();
                         if(!token){
                             token = await new Token({
                                 userId : user._id,
