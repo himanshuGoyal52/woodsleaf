@@ -153,12 +153,12 @@ export default function shop({products}) {
 										<li><a className="active" href="#list-view"  data-bs-toggle="tab"><i className="zmdi zmdi-view-list"></i></a></li>
 									</ul>
 									<div className="showing text-end d-none d-md-block">
-										<p className="mb-0">Showing 1-{fproducts.length} of {fproducts.length} Results</p>
+										<p className="mb-0">Showing 1-{fproducts?.length} of {fproducts?.length} Results</p>
 									</div>
 								</div>
 								{/* <!-- Tab panes --> */}
 								<div className="tab-content">
-									{fproducts.length === 0 ? (
+									{fproducts?.length === 0 ? (
 										<div>No products</div>
 									) : (
 										<>
