@@ -20,7 +20,7 @@ export default function ProductItemtwo({product , addToCartHandler , showProduct
 					<h4 className="post-title floatleft"><Link href={`/product/${product.slug}`}>{product.name}</Link></h4>
 					<span className="pro-rating floatright">
 						<Ratingstars reviews={product.reviews} />
-						<span>( {product.reviews.length} Rating )</span>
+						<span>( {product.reviews?.length} Rating )</span>
 					</span>
 				</div>
 				<div className="fix mb-20">
