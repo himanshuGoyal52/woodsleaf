@@ -9,6 +9,7 @@ import Link from 'next/link';
 export default function EmailVerifyScreen() {
     const [validUrl , setValidUrl] = useState(false);
     const {query} = useRouter();
+    const router = useRouter();
 
      useEffect(() => {
         const verifyEmailUrl = async () => {
@@ -53,8 +54,8 @@ export default function EmailVerifyScreen() {
                         <div className="error-content text-center">
                             <Image width={284} height={119} src="/img/bg/error.png" alt="Not Verified" />
                             <h4 className="text-light-black mt-60">Something went wrong!!</h4>
-                            <p className="text-light-black">Your email is not verified, please try again through login</p>
-                            <Link href="/login"><a style={{color:'#fff'}} className="button-one submit-btn-4 go-to-home text-uppercase "  data-text="Login" >Login</a></Link>
+                            <p className="text-light-black">Your email is not verified, please reload</p>
+                            <a onClick={() => {router.reload()}} style={{color:'#fff' , cursor : 'pointer'}} className="button-one submit-btn-4 go-to-home text-uppercase "  data-text="Reload" >Reload</a>
                         </div>
                     )}
                   </div>
