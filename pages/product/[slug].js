@@ -133,7 +133,7 @@ export default function ProductScreen({product}) {
 										<span className="pro-price">$ {product.price} {product.actual_price ? <sapn style={{textDecoration:'line-through' , fontSize :'0.8rem' , color:'rgb(102 102 102)'}}>({product.actual_price})</sapn>: ''}</span>
 									</div>
 									<div className="product-description">
-										<p>{product.desc} </p>
+										<p>{product.desc.slice(0,326)} </p>
 									</div>
 									<div>
 										{product.info.dimension && <p>Dimension - <span style={{fontWeight : 'normal'}}>{product.info.dimension} Inches</span></p>}
