@@ -8,7 +8,7 @@ import Emails from "../../../models/Emails";
 
 async function handler ( req , res) {
     if(req.method !== 'POST'){
-        return ;
+        return;
     }
 
     const {name , email , password , news } = req.body;
