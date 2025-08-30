@@ -11,7 +11,7 @@ export default function ProductItem({product , addToCartHandler , showProduct , 
 		<div className="single-product">
 			<div className="product-img">
 				{product.tag && <span className="pro-label new-label">{product.tag}</span>}
-				<span className="pro-price-2">$ {product.price}</span>
+				<span className="pro-price-2">₹ {product.price}</span>
 				<Link  href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image} alt={product.name}/></Link>
 			</div>
 			<div className="product-info clearfix text-center">

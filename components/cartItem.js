@@ -68,7 +68,7 @@ export default function CartItem({item}) {
 				</div>
                 </div>
             </td>
-            <td className="product-subtotal">$ {item.price * item.quantity}</td>
+            <td className="product-subtotal">₹ {item.price * item.quantity}</td>
             <td className="product-remove">
                 <span style={{cursor:'pointer'}} onClick={()=>removeItemHandler(item)}><i className="zmdi zmdi-close"></i></span>
             </td>

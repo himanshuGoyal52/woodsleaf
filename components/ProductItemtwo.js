@@ -12,7 +12,7 @@ export default function ProductItemtwo({product , addToCartHandler , showProduct
 		<div className="single-product clearfix">
 			<div className="product-img">
 				{product.tag && <span className="pro-label new-label">{product.tag}</span>}
-				<span className="pro-price-2">$ {product.price}</span>
+				<span className="pro-price-2">₹ {product.price}</span>
 				<Link href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image} alt={product.name} /></Link>
 			</div>
 			<div className="product-info">
@@ -24,8 +24,8 @@ export default function ProductItemtwo({product , addToCartHandler , showProduct
 					</span>
 				</div>
 				<div className="fix mb-20">
-					<span className="pro-price">$ {product.price}</span>
-					{product.actual_price ? <span className="old-price font-16px ml-10"><del>$ {product.actual_price}</del></span> : ''}
+					<span className="pro-price">₹ {product.price}</span>
+					{product.actual_price ? <span className="old-price font-16px ml-10"><del>₹ {product.actual_price}</del></span> : ''}
 				</div>
 				<div className="product-description">
 					<p>{product.desc.slice(0,326)}...</p>

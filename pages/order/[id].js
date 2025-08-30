@@ -160,7 +160,7 @@ export default function OrderScreen() {
           key: info.data.key,
           amount: info.data.amount,
           currency: "INR",
-          name: "Woodsleaf",
+          name: "Dcraftive",
           description: "Transaction",
           image: "https://xcmprn.stripocdn.email/content/guids/CABINET_aa5f800d1a4d1636fc6ba7e018205b294e599208b3a1e002ce02964ececeddfc/images/leaf_trans_logo.png",
           order_id: info.data.id,

@@ -66,7 +66,7 @@ export default function Header({title}) {
 						<div className="row">
 							<div className="col-md-4 offset-md-4 col-7">
 								<div className="logo text-md-center">
-									<Link href="/"><img style={{cursor:'pointer'}} src="/img/logo/logo.png"  alt="Woodsleaf" /></Link>
+									<Link href="/"><img style={{cursor:'pointer'}} src="/img/logo/logo.png"  alt="Dcraftive" /></Link>
 								</div>
 							</div>
 							<div className="col-md-4 col-5">
@@ -89,7 +89,7 @@ export default function Header({title}) {
 																</div> 
 																<div className="cart-info">
 																	<h5><Link href={`/product/${item.slug}`}><a>{item.name.slice(0,22)}</a></Link></h5>
-																	<p className="mb-0">Price : $ {item.price}</p>
+																	<p className="mb-0">Price : ₹ {item.price}</p>
 																	<p className="mb-0">Qty : {item.quantity} </p>
 																</div>
 															</div>

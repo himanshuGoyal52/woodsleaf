@@ -50,7 +50,7 @@ export default NextAuth({
                             await transporter.sendMail({
                                 ...mailOptions,
                                 to : user.email,
-                                subject : `${user.name}, Please verify your email || Woodsleaf`,
+                                subject : `${user.name}, Please verify your email || Dcraftive`,
                                 text : `Dear user, \n Please verify your email Id using the below link \n \n ${url}`,
                                 html : generateVerifyEmailContent(url)
                             })

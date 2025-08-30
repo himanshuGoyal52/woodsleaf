@@ -58,18 +58,18 @@ export default function Contact() {
 									<ul>
 										<li>
 											<i className="zmdi zmdi-pin"></i>
-											<span>A-219, Pal Shilpgram Riico Industrial Area</span>
+											<span>H-182, 3rd Phase, RIICO Industrial Area</span>
 											<span>Jodhpur, Rajasthan (IN)</span>
 										</li>
 										<li>
 											<i className="zmdi zmdi-phone"></i>
-											<span>+91-98294 74326</span>
-											<span>+91-72908 19777</span>
+											<span>+91-83062 32343</span>
+											<span>+91-87642 32343</span>
 										</li>
 										<li>
 											<i className="zmdi zmdi-email"></i>
-											<span>team@woodsleaf.com</span>
-											<span>info@woodsleaf.com</span>
+											<span>team@dcraftive.com</span>
+											<span>info@dcraftive.com</span>
 										</li>
 									</ul>
 								</div>
@@ -96,7 +96,7 @@ export default function Contact() {
 								 <AnyReactComponent
 									lat={59.955413}
 									lng={30.337844}
-									text="Woodsleaf"
+									text="Dcraftive"
 								/>
 								</GoogleMapReact>
 								</div>

@@ -42,10 +42,10 @@ function Layout({children , title , desc , productObj , addToCart , your_product
   return (
     <>
         <Head>
-            <title>{title ? title + " - Woodsleaf": "Woodsleaf.com"}</title>
+            <title>{title ? title + " - Dcraftive": "Dcraftive.com"}</title>
             <meta name="description" content={desc} />
             <link rel="icon" href="/favicon.ico" />
-            <meta property="og:title" content={title ? title + " - Woodsleaf": "Woodsleaf.com"} />
+            <meta property="og:title" content={title ? title + " - Dcraftive": "Dcraftive.com"} />
             <meta
               property="og:description"
               content={desc}

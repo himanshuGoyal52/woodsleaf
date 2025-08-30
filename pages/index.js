@@ -85,7 +85,7 @@ export default function HomeScreen(props) {
 								<li><a rel='noreferrer' href="https://www.instagram.com/woods_leaf/" target="_blank" title="Instagram"><i className="zmdi zmdi-instagram"></i></a></li>
 								<li><a rel='noreferrer' href="https://twitter.com/woods__leaf" target="_blank" title="Twitter"><i className="zmdi zmdi-twitter"></i></a></li>
 								<li><a rel='noreferrer' href="https://www.facebook.com/profile.php?id=100083983436524" target="_blank" title="Facebook"><i className="zmdi zmdi-facebook"></i></a></li>
-								<li><a rel='noreferrer' href="https://www.linkedin.com/company/woodsleaf/" target="_blank" title="Linkedin"><i className="zmdi zmdi-linkedin"></i></a></li>
+								<li><a rel='noreferrer' href="https://www.linkedin.com/company/dcraftive/" target="_blank" title="Linkedin"><i className="zmdi zmdi-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -283,8 +283,8 @@ export default function HomeScreen(props) {
 												<h4 className="post-title floatleft"><Link href={`/product/${product.slug}`}>{product.name}</Link></h4>
 											</div>
 											<div className="fix">
-												<span className="pro-price floatleft">$ {product.price}</span>
-												{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>$ {product.actual_price}</del></span> : ''}
+												<span className="pro-price floatleft">₹ {product.price}</span>
+												{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>₹ {product.actual_price}</del></span> : ''}
 												<span className="pro-rating floatright">
 													<Ratingstars reviews={product.reviews} />
 												</span>
@@ -310,7 +310,7 @@ export default function HomeScreen(props) {
 										<div className="discount-img-brief">
 											<div className="onsale">
 												<span className="onsale-text">On Sale</span>
-												<span className="onsale-price">$ {item.price}.00</span>
+												<span className="onsale-price">₹ {item.price}.00</span>
 											</div>
 											<div className="discount-info">
 												<h1 className="text-dark-red d-none d-md-block">Discount {item.off}%</h1>
@@ -332,7 +332,7 @@ export default function HomeScreen(props) {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-title text-center">
-								<h2 className="title-border">Collection at Woodsleaf</h2>
+								<h2 className="title-border">Collection at Dcraftive</h2>
 							</div>
 						</div>
 					</div>
@@ -373,8 +373,8 @@ export default function HomeScreen(props) {
 														
 													</div>
 													<div className="fix">
-														<span className="pro-price floatleft">$ {product.price}</span>
-														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>$ {product.actual_price}</del></span> : ''}
+														<span className="pro-price floatleft">₹ {product.price}</span>
+														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>₹ {product.actual_price}</del></span> : ''}
 														<span className="pro-rating floatright">
 															<Ratingstars reviews={product.reviews}/>
 														</span>
@@ -409,8 +409,8 @@ export default function HomeScreen(props) {
 														
 													</div>
 													<div className="fix">
-														<span className="pro-price floatleft">$ {product.price}</span>
-														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>$ {product.actual_price}</del></span> : ''}
+														<span className="pro-price floatleft">₹ {product.price}</span>
+														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>₹ {product.actual_price}</del></span> : ''}
 														<span className="pro-rating floatright">
 															<Ratingstars reviews={product.reviews}/>
 														</span>
@@ -445,8 +445,8 @@ export default function HomeScreen(props) {
 														
 													</div>
 													<div className="fix">
-														<span className="pro-price floatleft">$ {product.price}</span>
-														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>$ {product.actual_price}</del></span> : ''}
+														<span className="pro-price floatleft">₹ {product.price}</span>
+														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>₹ {product.actual_price}</del></span> : ''}
 														<span className="pro-rating floatright">
 															<Ratingstars reviews={product.reviews}/>
 														</span>
@@ -481,8 +481,8 @@ export default function HomeScreen(props) {
 														
 													</div>
 													<div className="fix">
-														<span className="pro-price floatleft">$ {product.price}</span>
-														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>$ {product.actual_price}</del></span> : ''}
+														<span className="pro-price floatleft">₹ {product.price}</span>
+														{product.actual_price ? <span className="old-price font-16px ml-10 " style={{position:'relative' , top:'3.5px'}}><del>₹ {product.actual_price}</del></span> : ''}
 														<span className="pro-rating floatright">
 															<Ratingstars reviews={product.reviews}/>
 														</span>

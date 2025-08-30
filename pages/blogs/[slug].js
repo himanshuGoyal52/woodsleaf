@@ -42,12 +42,12 @@ export default function SingleBlogScreen({blog}) {
 										<div className="post-share-tag clearfix mt-40 " >
 											<div className="post-share floatleft" style={{color : '#efebd9'}}>
 												<span className="text-uppercase"><strong>Share</strong></span>
-												<a><WhatsappShareButton title={blog?.title} separator='||' url={`https://www.woodsleaf.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-whatsapp"></i></WhatsappShareButton></a>
-												<a> <FacebookShareButton quote={blog?.title} hashtag='#woodsleaf' url={`https://www.woodsleaf.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-facebook"></i></FacebookShareButton></a>
-												<a><TwitterShareButton title={blog?.title} url={`https://www.woodsleaf.com/blogs/${blog?.slug}`} ><i className="zmdi zmdi-twitter"></i></TwitterShareButton> </a>
-												<a><LinkedinShareButton title={blog?.title} url={`https://www.woodsleaf.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-linkedin"></i></LinkedinShareButton></a>
+												<a><WhatsappShareButton title={blog?.title} separator='||' url={`https://www.dcraftive.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-whatsapp"></i></WhatsappShareButton></a>
+												<a> <FacebookShareButton quote={blog?.title} hashtag='#dcraftive' url={`https://www.dcraftive.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-facebook"></i></FacebookShareButton></a>
+												<a><TwitterShareButton title={blog?.title} url={`https://www.dcraftive.com/blogs/${blog?.slug}`} ><i className="zmdi zmdi-twitter"></i></TwitterShareButton> </a>
+												<a><LinkedinShareButton title={blog?.title} url={`https://www.dcraftive.com/blogs/${blog?.slug}`}><i className="zmdi zmdi-linkedin"></i></LinkedinShareButton></a>
 												
-												<a> <PinterestShareButton media={blog?.image} url={`https://www.woodsleaf.com/blogs/${blog?.slug}`} description={blog.content[0].content} title={blog?.title}><i className="zmdi zmdi-pinterest"></i></PinterestShareButton></a>
+												<a> <PinterestShareButton media={blog?.image} url={`https://www.dcraftive.com/blogs/${blog?.slug}`} description={blog.content[0].content} title={blog?.title}><i className="zmdi zmdi-pinterest"></i></PinterestShareButton></a>
 											</div>
 											<div className="post-share post-tag floatright" >
 												<span className="text-uppercase"><strong style={{color : '#efebd9'}}>tags</strong></span>
