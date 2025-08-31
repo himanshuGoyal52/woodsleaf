@@ -39,7 +39,7 @@ const postHandler = async (req, res) => {
       top_material : "smaple top material"
     },
     desc : 'sample description',
-    insta : 'https://www.instagram.com/woods_leaf/'
+    insta : 'https://www.instagram.com/dcraftive/'
   });
 
   const product = await newProduct.save();

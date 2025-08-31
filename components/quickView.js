@@ -25,8 +25,8 @@ export default function QuickView({product , addToCart}) {
                                      <div  className="price-box-3">
                                          <hr />
                                          <div  className="s-price-box">
-                                             <span  className="new-price">${product?.price}</span>
-                                             {product?.actual_price ? <span  className="old-price" style={{fontSize : '0.7em'}}>${product?.actual_price}</span> : ''}
+                                             <span  className="new-price">₹ {product?.price}</span>
+                                             {product?.actual_price ? <span  className="old-price" style={{fontSize : '0.7em'}}>₹ {product?.actual_price}</span> : ''}
                                          </div>
                                          <hr />
                                      </div>

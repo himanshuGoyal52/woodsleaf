@@ -21,10 +21,10 @@ const handler = async (req , res) => {
             return res.status(400).send({message : 'Error: order is already paid'});
         }
 
-        const { totalPriceINR } = order_my;
+        const { totalPrice } = order_my;
         
         let options = {
-            amount : totalPriceINR * 100 ,
+            amount : totalPrice * 100 ,
             currency : "INR",
         };
         let order = await razorpay.orders.create(options);

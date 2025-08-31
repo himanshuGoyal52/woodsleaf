@@ -24,7 +24,7 @@ const handler = async (req , res) => {
             ...mailOptions,
             to : user.email,
             subject : `Thank You For Your Order!, ${user.name} || Dcraftive`,
-            text : `Order ID: ${order._id} \n \n Hello ${user.name}, \n \n We’re happy to let you know that we’ve received your order with order value of $${order.totalPrice}/-. \n \n Kindly proceed with payment of your order for further processing of your order. \n \n If you have any questions, contact us info@dcraftive.com or call us on +91-7412972658! \n \n We are here to help! \n \n dcraftive.com`,
+            text : `Order ID: ${order._id} \n \n Hello ${user.name}, \n \n We’re happy to let you know that we’ve received your order with order value of ₹ ${order.totalPrice}/-. \n \n Kindly proceed with payment of your order for further processing of your order. \n \n If you have any questions, contact us info@dcraftive.com or call us on +91-7412972658! \n \n We are here to help! \n \n dcraftive.com`,
             html : generateEmailContent(order)
         })
     }catch(err){

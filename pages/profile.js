@@ -176,7 +176,7 @@ function ProfileScreen() {
     																				</th>
     																				
     																				<th style={{fontWeight : 'lighter'}}>
-																						${order.totalPrice}
+																						₹ {order.totalPrice}
     																				</th>
     																			</tr>
     																			<tr>	

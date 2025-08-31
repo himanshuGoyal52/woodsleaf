@@ -19,7 +19,7 @@ export default function about() {
 							<div className="col-lg-6">
 								<div className="about-brief bg-dark-white">
 									<h4 className="title-1 title-border text-uppercase mb-30">about dcraftive</h4>
-									<p>Welcome to Dcraftive, a leading name in the furniture industry, where craftsmanship and innovation come together to create exquisite pieces for your living spaces. We specialize in designing and crafting furniture made of iron, wood, leather, bone inlay, marble, and canning. With a strong emphasis on quality, customization, and timely delivery, we have become a trusted brand worldwide.</p>
+									<p>Welcome to Dcraftive, a leading name in the furniture industry, where craftsmanship and innovation come together to create exquisite pieces for your living spaces. We specialize in designing and crafting furniture made of iron, wood, leather, iron, marble, and canning. With a strong emphasis on quality, customization, and timely delivery, we have become a trusted brand worldwide.</p>
 									<p>At Dcraftive, we understand that furniture is not just a functional element but an expression of your unique style and personality. That's why we offer a wide range of customizable options to ensure that every piece we create reflects your individual taste and meets your specific requirements. From timeless classics to contemporary designs, our skilled artisans and designers meticulously craft furniture that will enhance the beauty and comfort of your spaces.</p>
 								</div>
 							</div>

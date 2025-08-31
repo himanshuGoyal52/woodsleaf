@@ -22,8 +22,6 @@ export default function PlaceOrderScreen() {
 	const taxPrice = round2(itemsPrice * 0.18);
 	const totalPrice = round2(taxPrice + itemsPrice);
 
-
-
 	const [USDtoINR , setUSDtoINR] = useState({rate : 82.45});
 	useEffect(()=>{
 		const getusdtoinr =  async () => {
@@ -51,9 +49,9 @@ export default function PlaceOrderScreen() {
 
 	
 	let totalPriceINR = round2(totalPrice * USDtoINR.rate);
+	let totalPriceUSD = round2(totalPrice / USDtoINR.rate);
 
 	const [loading , setLoading] = useState(false);
-
 
 	const placeOrderHandler = async () => {
 		try{
@@ -66,6 +64,7 @@ export default function PlaceOrderScreen() {
 				taxPrice,
 				totalPrice,
 				totalPriceINR,
+				totalPriceUSD,
 			});
 			setLoading(false);
 			dispatch({type : "CART_CLEAR_ITEMS"});
@@ -135,16 +134,16 @@ export default function PlaceOrderScreen() {
 																	}
 																	<tr>
 																		<td>Cart Subtotal</td>
-																		<td  className="text-end">${itemsPrice}</td>
+																		<td  className="text-end">₹ {itemsPrice}</td>
 																	</tr>
 																	
 																	<tr>
 																		<td>Tax (GST)</td>
-																		<td  className="text-end">${taxPrice}</td>
+																		<td  className="text-end">₹ {taxPrice}</td>
 																	</tr>
 																	<tr>
 																		<td>Order Total</td>
-																		<td  className="text-end">${totalPrice}</td>
+																		<td  className="text-end">₹ {totalPrice}</td>
 																	</tr>
 																</tbody>
 															</table>

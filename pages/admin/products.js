@@ -147,7 +147,7 @@ export default function AdminProdcutsScreen() {
                       <td className=" p-5 ">{product.sku}</td>
                       <td className=" p-5 ">{product._id}</td>
                       <td className=" p-5 ">{product.name}</td>
-                      <td className=" p-5 ">${product.price}</td>
+                      <td className=" p-5 ">₹ {product.price}</td>
                       <td className=" p-5 ">{product.category}</td>
                       <td className=" p-5 ">{product.reviews.length}</td>
                       <td className=" p-5 ">

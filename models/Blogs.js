@@ -10,7 +10,7 @@ const blogSchema = new mongoose.Schema(
         tags : {type : Array},
         author : {type : String , required : true},
         shareCount : {type : Number , required : true},
-        insta : {type : String , default : "https://www.instagram.com/woods_leaf/"},
+        insta : {type : String , default : "https://www.instagram.com/dcraftive/"},
     },
     {
         timestamps : true,

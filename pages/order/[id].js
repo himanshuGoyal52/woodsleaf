@@ -109,6 +109,7 @@ export default function OrderScreen() {
         itemsPrice,
         taxPrice,
         totalPrice,
+        totalPriceUSD,
         isPaid,
         deliveryStatus,
       } = order;
@@ -119,7 +120,7 @@ export default function OrderScreen() {
           .create({
             purchase_units: [
               {
-                amount: { value: totalPrice },
+                amount: { value: totalPriceUSD },
               },
             ],
           })
@@ -162,7 +163,7 @@ export default function OrderScreen() {
           currency: "INR",
           name: "Dcraftive",
           description: "Transaction",
-          image: "https://xcmprn.stripocdn.email/content/guids/CABINET_aa5f800d1a4d1636fc6ba7e018205b294e599208b3a1e002ce02964ececeddfc/images/leaf_trans_logo.png",
+          image: "https://res.cloudinary.com/dzszmjalq/image/upload/v1756625220/upload_this_and_use_sybtl0.png",
           order_id: info.data.id,
           handler: async (res) => {
             const _data =  await axios.post (`/api/orders/${orderId}/verify`,{
@@ -263,16 +264,16 @@ export default function OrderScreen() {
 																	}
 																	<tr>
 																		<td>Cart Subtotal</td>
-																		<td  className="text-end">${itemsPrice}</td>
+																		<td  className="text-end">₹ {itemsPrice}</td>
 																	</tr>
 																	
 																	<tr>
 																		<td>Vat</td>
-																		<td  className="text-end">${taxPrice}</td>
+																		<td  className="text-end">₹ {taxPrice}</td>
 																	</tr>
 																	<tr>
 																		<td>Order Total</td>
-																		<td  className="text-end">${totalPrice}</td>
+																		<td  className="text-end">₹ {totalPrice}</td>
 																	</tr>
 																</tbody>
 															</table>

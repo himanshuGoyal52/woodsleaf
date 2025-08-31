@@ -82,10 +82,10 @@ export default function HomeScreen(props) {
 					<div className="table">
 						<div className="table-cell">
 							<ul>
-								<li><a rel='noreferrer' href="https://www.instagram.com/woods_leaf/" target="_blank" title="Instagram"><i className="zmdi zmdi-instagram"></i></a></li>
-								<li><a rel='noreferrer' href="https://twitter.com/woods__leaf" target="_blank" title="Twitter"><i className="zmdi zmdi-twitter"></i></a></li>
-								<li><a rel='noreferrer' href="https://www.facebook.com/profile.php?id=100083983436524" target="_blank" title="Facebook"><i className="zmdi zmdi-facebook"></i></a></li>
-								<li><a rel='noreferrer' href="https://www.linkedin.com/company/dcraftive/" target="_blank" title="Linkedin"><i className="zmdi zmdi-linkedin"></i></a></li>
+								<li><a rel='noreferrer' href="https://www.instagram.com/dcraftive/" target="_blank" title="Instagram"><i className="zmdi zmdi-instagram"></i></a></li>
+								<li><a rel='noreferrer' href="https://www.instagram.com/dcraftive/" target="_blank" title="Twitter"><i className="zmdi zmdi-twitter"></i></a></li>
+								<li><a rel='noreferrer' href="https://www.instagram.com/dcraftive/" target="_blank" title="Facebook"><i className="zmdi zmdi-facebook"></i></a></li>
+								<li><a rel='noreferrer' href="https://www.instagram.com/dcraftive/" target="_blank" title="Linkedin"><i className="zmdi zmdi-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -97,7 +97,7 @@ export default function HomeScreen(props) {
 						<div className="single-banner banner-1">
 							<Link className="banner-thumb" href={`/product/${props.home[0].front_two_products[0].slug}`}><a><img src={props.home[0].front_two_products[0].image} alt={props.home[0].front_two_products[0].name} /></a></Link>
 							<span className="pro-label new-label">{props.home[0].front_two_products[0].tag}</span>
-							<span className="price">${props.home[0].front_two_products[0].price}.00</span>
+							<span className="price">₹ {props.home[0].front_two_products[0].price}.00</span>
 							<div className="banner-brief">
 								<h2 className="banner-title"><Link href={`/product/${props.home[0].front_two_products[0].slug}`}>{props.home[0].front_two_products[0].name}</Link></h2>
 								<p className="mb-0">{props.home[0].front_two_products[0].collection_type}</p>
@@ -340,8 +340,8 @@ export default function HomeScreen(props) {
 						<div className="col-lg-12 text-center">
 							{/* <!-- Nav tabs --> */}
 							<ul className="tab-menu nav clearfix">
-								<li><a className="active" href="#new-arrivals" data-bs-toggle="tab">Bone Inlay</a></li>
-								<li><a href="#best-seller"  data-bs-toggle="tab">Wooden furniture</a></li>
+								<li><a className="active" href="#best-seller"  data-bs-toggle="tab">Wooden furniture</a></li>
+								<li><a  href="#new-arrivals" data-bs-toggle="tab">Iron furniture</a></li>
 								<li><a href="#most-view" data-bs-toggle="tab">Marble furniture</a></li>
 								<li><a href="#discounts" data-bs-toggle="tab">Carving furniture</a></li>
 							</ul>
@@ -349,13 +349,13 @@ export default function HomeScreen(props) {
 						<div className="col-lg-12">
 							{/* <!-- Tab panes --> */}
 							<div className="tab-content">
-								<div className="tab-pane active" id="new-arrivals">
+								<div className="tab-pane active" id="best-seller">
 									<div className="row">
-										{props.boneInlayProducts?.map((product) => (
+										{props.woodenProducts?.map((product) => (
 											<div key={product.slug} className="single-product col-xl-3 col-lg-4 col-md-6">
 												<div className="product-img">
 													{product.tag && <span className="pro-label new-label">{product.tag}</span>}
-													<Link  href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image} alt="" /></Link>
+													<Link href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image}alt="" /></Link>
 													<div className="product-action clearfix">
 														{state.wishlist?.wishlistItems?.find((x) => x.slug == product.slug) ?  (
 															<button onClick={() => addToWishlistHandler(product)}  data-bs-toggle="tooltip" data-placement="top" title="Remove from wishlist"><i className="zmdi zmdi-favorite"></i></button>
@@ -385,13 +385,13 @@ export default function HomeScreen(props) {
 										))}
 									</div>
 								</div>
-								<div className="tab-pane" id="best-seller">
+								<div className="tab-pane" id="new-arrivals">
 									<div className="row">
-										{props.woodenProducts?.map((product) => (
+										{props.ironProducts?.map((product) => (
 											<div key={product.slug} className="single-product col-xl-3 col-lg-4 col-md-6">
 												<div className="product-img">
 													{product.tag && <span className="pro-label new-label">{product.tag}</span>}
-													<Link href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image}alt="" /></Link>
+													<Link  href={`/product/${product.slug}`}><img style={{cursor:'pointer'}} src={product.image} alt="" /></Link>
 													<div className="product-action clearfix">
 														{state.wishlist?.wishlistItems?.find((x) => x.slug == product.slug) ?  (
 															<button onClick={() => addToWishlistHandler(product)}  data-bs-toggle="tooltip" data-placement="top" title="Remove from wishlist"><i className="zmdi zmdi-favorite"></i></button>
@@ -561,7 +561,7 @@ export async function getServerSideProps(){
 	
 	await db.connect();
 	const featuredProducts = await Product.find({featured : true}).lean().limit(5);
-	const boneInlayProducts = await Product.find({home_page : true , collection_type : 'boneInlay'}).lean().limit(8);
+	const ironProducts = await Product.find({home_page : true , collection_type : 'iron'}).lean().limit(8);
 	const woodenProducts = await Product.find({home_page : true , collection_type : 'wooden'} ).lean().limit(8);
 	const marbleProducts = await Product.find({home_page : true , collection_type : 'marble'} ).lean().limit(8);
 	const carvingProducts = await Product.find({home_page : true , collection_type : 'carving'} ).lean().limit(8);
@@ -570,7 +570,7 @@ export async function getServerSideProps(){
 	return {
 		props : {
 			featuredProducts : featuredProducts.map(db.convertDocToObj),
-			boneInlayProducts : boneInlayProducts.map(db.convertDocToObj),
+			ironProducts : ironProducts.map(db.convertDocToObj),
 			woodenProducts : woodenProducts.map(db.convertDocToObj),
 			marbleProducts : marbleProducts.map(db.convertDocToObj),
 			carvingProducts : carvingProducts.map(db.convertDocToObj),

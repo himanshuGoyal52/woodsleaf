@@ -57,7 +57,7 @@ export default function CartItem({item}) {
                 </div>
                 {/* <!-- Single-product end -->	*/}
             </td>
-            <td className="product-price">${item.price}</td>
+            <td className="product-price">₹ {item.price}</td>
             <td className="product-quantity">
                 <div style={{display : 'flex' , alignItems : 'center' , justifyContent : 'center'}}>
 

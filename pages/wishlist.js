@@ -108,7 +108,7 @@ function WishlistScreen() {
                                                                         </div>
                                                                         {/* <!-- Single-product end -->				 */}
                                                                     </td>
-                                                                    <td className="product-price">${item.price}</td>
+                                                                    <td className="product-price">₹ {item.price}</td>
                                                                     <td className="product-stock">in stock</td>
                                                                     <td className="product-add-cart" >
                                                                         <button className="text-light-black" onClick={() => {addToCartHandler(item , 1)}}><i className="zmdi zmdi-shopping-cart-plus"></i></button>
