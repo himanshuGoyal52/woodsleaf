@@ -98,7 +98,7 @@ export default function Header({title}) {
 														
 													</div>
 													<div className="cart-totals">
-														<h5 className="mb-0">Total : &nbsp;<span className="floatright">${cart?.cartItems?.reduce((a,c) => a+c.quantity * c.price,0)}</span></h5>
+														<h5 className="mb-0">Total : &nbsp;<span className="floatright">₹ {cart?.cartItems?.reduce((a,c) => a+c.quantity * c.price,0)}</span></h5>
 													</div>
 													<div className="cart-bottom  clearfix">
 														<Link  href="/cart"  ><a style={{border: '2px solid #d1cac1'}} data-text="View cart" className="button-one floatleft text-uppercase">View cart</a></Link>
