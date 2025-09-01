@@ -38,8 +38,8 @@ export default function Contact() {
 
 	const defaultProps = {
 		center: {
-		  lat: 26.212150,
-		  lng: 72.951610
+		  lat: 26.175725431838586,
+		  lng: 72.92811402016184
 		},
 		zoom: 15
 	  };
