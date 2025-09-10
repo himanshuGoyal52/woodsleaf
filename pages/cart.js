@@ -75,15 +75,15 @@ function CartScreen() {
 															<tbody>
 																<tr>
 																	<td className="text-left">Cart Subtotal</td>
-																	<td className="text-end">${cartItems.reduce((a,c) => a+c.quantity * c.price,0)}</td>
+																	<td className="text-end">₹ {cartItems.reduce((a,c) => a+c.quantity * c.price,0)}</td>
 																</tr>
 																<tr>
 																	<td className="text-left">Shipping</td>
-																	<td className="text-end">$00</td>
+																	<td className="text-end">₹ 00</td>
 																</tr>
 																<tr>
 																	<td className="text-left">Order Total</td>
-																	<td className="text-end">${cartItems.reduce((a,c) => a+c.quantity * c.price,0)}</td>
+																	<td className="text-end">₹ {cartItems.reduce((a,c) => a+c.quantity * c.price,0)}</td>
 																</tr>
 															</tbody>
 														</table>
