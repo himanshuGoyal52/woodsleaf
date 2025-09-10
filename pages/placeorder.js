@@ -128,7 +128,7 @@ export default function PlaceOrderScreen() {
 																		cartItems.map((item) => (
 																			<tr key={item.slug}>
 																				<td>{item.name}  x {item.quantity}</td>
-																				<td  className="text-end">${item.price * item.quantity}</td>
+																				<td  className="text-end">₹ {item.price * item.quantity}</td>
 																			</tr>
 																		))
 																	}
